@@ -106,8 +106,6 @@ jobs:
     - name: Building recovery
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
-        echo "copy magisk from ./device/xiaomi/fire/Magisk/Magisk-v27.0.zip"
-        cp ./device/xiaomi/fire/Magisk/Magisk-v27.0.zip ~/Magisk/Magisk-v27.0.zip
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
